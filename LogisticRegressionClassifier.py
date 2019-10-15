@@ -13,16 +13,20 @@ class LogisticRegressionClassifier:
     def cost_function(self, beta, X, Y):   
         return -np.sum((Y * np.log(self.sigmoid(X, beta))) + ((1-Y) * np.log(1 - self.sigmoid(X, beta)))) 
 
-    def gradient_descent(self, beta, X, Y, n = 1000, tol = exp(-10), step = 0.01): 
+    def gradient_descent(self, beta, X, Y, n = 100, tol = exp(-10), step = 0.01): 
         i = 0 
-        change = 1  
+        change = 1
         while i < n and change > tol:    
-            gradient = np.dot(X.transpose(), (Y - self.sigmoid(X, beta))) 
-            
+            gradient = np.dot(X.transpose(), (Y - self.sigmoid(X, beta)))   
             beta_new = beta + (step * gradient)    
-            change = abs((beta_new - beta).max()) 
+            change = abs(self.cost_function(beta, X, Y) - self.cost_function(beta_new, X, Y)) 
             beta = beta_new 
+
+            if i % 10 == 0: 
+                print('iter: ' + str(i) + ' cost: ' + str(self.cost_function(beta_new, X, Y))) 
+                
             i += 1
+
 
         return beta   
 
