@@ -4,5 +4,6 @@ Practice building logsitic regression model
 Reference taken from https://medium.com/@martinpella/logistic-regression-from-scratch-in-python-124c5636b8ac 
 
 to do: 
-- check gradient descent method to see if weights are being tuned correctly 
+- check cost function calculation 
+- check if gradient is calculated correctly 
 - improve for multinomial logistic regression 
