@@ -1,9 +1,7 @@
 # Logistic-Regression-
-Practice building logsitic regression model 
+Practice building logistic regression model to consolidate theoretical knowledge. 
 
-Reference taken from https://medium.com/@martinpella/logistic-regression-from-scratch-in-python-124c5636b8ac 
+Reference taken from https://towardsdatascience.com/logistic-regression-detailed-overview-46c4da4303bc
 
-to do: 
-- check cost function calculation 
-- check if gradient is calculated correctly 
-- improve for multinomial logistic regression 
+further improvements: 
+- add functionality for coeficient standard error, multinomial logistic regression 
